@@ -2,33 +2,39 @@ import React from 'react';
 
 interface ShivaanganLogoProps {
   className?: string;
-  variant?: 'light' | 'dark'; // light background vs dark background
+  variant?: 'light' | 'dark';
   height?: number | string;
-  showSubtext?: boolean;
 }
 
 const ShivaanganLogo: React.FC<ShivaanganLogoProps> = ({ 
   className = '', 
   variant = 'light',
-  height,
+  height = 42,
 }) => {
   const isDark = variant === 'dark';
 
   return (
-    <div className={`inline-flex items-center ${className}`}>
+    <div className={`inline-flex items-center gap-3 select-none ${className}`}>
       <img 
-        src="/shivaangan_logo.svg" 
-        alt="Shivaangan Realcon LLP" 
-        className={`h-11 md:h-13 w-auto object-contain transition-transform duration-300 ${
-          isDark 
-            ? 'bg-white/95 px-2.5 py-1.5 rounded-xl shadow-md border border-white/20' 
-            : 'filter drop-shadow-sm'
-        }`}
-        style={height ? { height } : undefined}
+        src="/shivaangan_logo_only.svg" 
+        alt="Shivaangan Emblem" 
+        className="w-auto object-contain shrink-0"
+        style={{ height }}
       />
+      <div className="flex flex-col justify-center leading-none">
+        <div className="text-xl md:text-2xl font-black tracking-tight flex items-center">
+          <span style={{ color: '#ab533e' }}>SHIVA</span>
+          <span style={{ color: '#d37d1e' }}>ANGAN</span>
+        </div>
+        <span 
+          style={{ color: isDark ? '#9ca3af' : '#595b60' }} 
+          className="text-[9px] md:text-[10px] uppercase font-bold tracking-[0.28em] mt-1"
+        >
+          REALCON
+        </span>
+      </div>
     </div>
   );
 };
 
 export default ShivaanganLogo;
-

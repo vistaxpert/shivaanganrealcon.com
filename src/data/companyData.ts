@@ -15,51 +15,52 @@ export interface ProjectItem {
 }
 
 export const COMPANY_INFO = {
-  name: "Shivaangan Realcon LLP",
-  legalName: "Shivaangan Realcon LLP",
+  name: "Shivaangan Realcon",
+  legalName: "Shivaangan Realcon",
   tagline: "Redefining Luxury & Engineering Excellence",
-  description: "Shivaangan Realcon LLP is a premier real estate developer committed to creating architectural landmarks, premium residential communities, and state-of-the-art commercial hubs across Maharashtra.",
+  description: "Shivaangan Realcon is a premier real estate developer committed to creating architectural landmarks, premium residential communities, and state-of-the-art commercial hubs across Maharashtra.",
   estYear: "2010",
   experienceYears: "15+",
   stats: [
-    { value: "15+", label: "Years of Engineering Leadership" },
+    { value: "15+", label: "Years of Industry Excellence" },
     { value: "10 Lac+", label: "Sq. Ft. Built & Delivered" },
     { value: "1,200+", label: "Happy Families & Business Partners" },
     { value: "14+", label: "Landmark Projects Completed & Ongoing" }
   ],
+  directors: [
+    {
+      name: "Amit Sanas",
+      title: "Director",
+      image: "/images/directors/amit_sanas.jpg",
+      bio: "A dynamic leader and visionary real estate entrepreneur driving strategic project execution, high-quality development standards, and customer trust across Shivaangan Realcon."
+    },
+    {
+      name: "Rupesh Hande",
+      title: "Director",
+      image: "/images/directors/rupesh_hande.jpg",
+      bio: "An accomplished real estate visionary overseeing architectural innovation, strategic business expansion, land acquisition, and landmark development for Shivaangan Realcon."
+    }
+  ],
   director: {
-    name: "Er. Rahul Khatmode",
-    title: "President - CREDAI BARAMATI & Designated Partner",
-    qualification: "B.E. Civil",
-    phone: "+91 9767900555",
-    email: "rahulkhatmode04@gmail.com",
-    bio: "A visionary civil engineer and business leader with over 15 years of industry experience. Er. Rahul Khatmode serves as the President of CREDAI Baramati and leads Shivaangan Realcon LLP, Nirmiti Group, Shomika Infra (Govt. Contractor), and Khatri-Khatmode Associates.",
-    entities: [
-      "Nirmiti Group, Baramati",
-      "Shomika Infra (Government Contractor)",
-      "Khatri-Khatmode Associates",
-      "Shivaangan Realcon LLP"
-    ]
+    name: "Amit Sanas & Rupesh Hande",
+    title: "Directors",
+    phone: "+91 7030 255 755",
+    email: "contact@shivaanganrealcon.com"
   },
   offices: [
     {
-      city: "Pune Office",
-      address: "D 006, Spring Field Co. Hsg. Soc., Kothrud",
-      pincode: "Pune - 411038",
-      phone: "+91 9767900555",
-      email: "rahulkhatmode04@gmail.com",
-      mapUrl: "https://maps.google.com/?q=Kothrud,+Pune"
-    },
-    {
-      city: "Baramati Office",
-      address: "D-102, Nirmiti Park, Near V.P. Engg. College, Rui",
-      pincode: "Baramati - 413133",
-      phone: "+91 9767900555",
-      email: "rahulkhatmode04@gmail.com",
-      mapUrl: "https://maps.google.com/?q=Baramati"
+      city: "Pune Head Office",
+      address: "Shop no. M 14, 1st floor, VTP Trade Park, S. No. 28/2B, Hadapsar- Katraj Road, Undri",
+      pincode: "Pune - 411060",
+      phone: "+91 7030 255 755",
+      email: "contact@shivaanganrealcon.com",
+      mapUrl: "https://maps.app.goo.gl/6XdxQPxZsRW2UGut5?g_st=aw"
     }
   ],
-  whatsappNumber: "919767900555"
+  phone: "+91 7030 255 755",
+  email: "contact@shivaanganrealcon.com",
+  whatsappNumber: "917030255755",
+  mapUrl: "https://maps.app.goo.gl/6XdxQPxZsRW2UGut5?g_st=aw"
 };
 
 export const REGALIA_PROJECT: ProjectItem & {
@@ -76,7 +77,7 @@ export const REGALIA_PROJECT: ProjectItem & {
   year: "2024-2026",
   units: "2 & 3 BHK Luxury Residences & Commercial Spaces",
   image: "/images/Durga City Mall.png",
-  description: "REGALIA is the crown jewel of Shivaangan Realcon LLP. Designed for discerning homebuyers, REGALIA combines contemporary ultra-luxury architecture, sky-level lifestyle amenities, lush green landscapes, and uncompromised structural engineering.",
+  description: "REGALIA is the crown jewel of Shivaangan Realcon. Designed for discerning homebuyers, REGALIA combines contemporary ultra-luxury architecture, sky-level lifestyle amenities, lush green landscapes, and uncompromised structural engineering.",
   highlights: [
     "Grand Entrance Plaza with 24/7 Multi-tier Security",
     "High-speed Elevator Systems with Power Backup",
@@ -347,7 +348,7 @@ export const TESTIMONIALS_LIST = [
   {
     name: "Dr. Suresh Deshmukh",
     position: "Homeowner, REGALIA",
-    testimonial: "Shivaangan Realcon LLP and Er. Rahul Khatmode represent trust and unmatched construction quality. Purchasing our home in REGALIA has been the best financial and lifestyle decision."
+    testimonial: "Shivaangan Realcon and Er. Rahul Khatmode represent trust and unmatched construction quality. Purchasing our home in REGALIA has been the best financial and lifestyle decision."
   },
   {
     name: "Vikram Shah",

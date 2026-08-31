@@ -30,7 +30,7 @@ const ContactForm = () => {
     
     // Simulate form submission
     setTimeout(() => {
-      console.log('Form data submitted for Shivaangan Realcon LLP:', formData);
+      console.log('Form data submitted for Shivaangan Realcon:', formData);
       toast.success("Thank you! Your enquiry has been received. Our sales team will call you shortly.");
       setIsSubmitting(false);
       setSubmitted(true);
@@ -38,7 +38,7 @@ const ContactForm = () => {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Shivaangan Realcon LLP,\nName: ${formData.name || 'Interested Customer'}\nPhone: ${formData.phone || 'N/A'}\nSubject: ${formData.subject}\nMessage: ${formData.message || 'Interested in project details.'}`
+    `Hello Shivaangan Realcon,\nName: ${formData.name || 'Interested Customer'}\nPhone: ${formData.phone || 'N/A'}\nSubject: ${formData.subject}\nMessage: ${formData.message || 'Interested in project details.'}`
   );
 
   return (
@@ -50,7 +50,7 @@ const ContactForm = () => {
           </div>
           <h3 className="text-2xl font-bold text-shivaangan-navy mb-2">Enquiry Sent Successfully!</h3>
           <p className="text-gray-600 mb-6">
-            Thank you for contacting <strong>Shivaangan Realcon LLP</strong>. Er. Rahul Khatmode and our team will get in touch with you right away.
+            Thank you for contacting <strong>Shivaangan Realcon</strong>. Er. Rahul Khatmode and our team will get in touch with you right away.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

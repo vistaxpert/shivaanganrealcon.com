@@ -8,6 +8,7 @@ import Projects from '@/pages/Projects';
 import Regalia from '@/pages/Regalia';
 import Gallery from '@/pages/Gallery';
 import Contact from '@/pages/Contact';
+import ChannelPartners from '@/pages/ChannelPartners';
 import NotFound from '@/pages/NotFound';
 import { ModalProvider } from '@/context/ModalContext';
 import ProjectDetailsModal from '@/components/ProjectDetailsModal';
@@ -33,6 +34,7 @@ const AppContent = () => {
         <Route path="/about" element={<About />} />
         <Route path="/regalia" element={<Regalia />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/channel-partners" element={<ChannelPartners />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />

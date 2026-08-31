@@ -270,7 +270,7 @@ export const Footer6: React.FC<Footer6Props> = ({ className = '' }) => {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left space-y-1">
             <p className="text-xs text-gray-400">
-              &copy; {new Date().getFullYear()} <span className="text-white font-medium">Shivaangan Realcon LLP</span>. All rights reserved.
+              &copy; {new Date().getFullYear()} <span className="text-white font-medium">Shivaangan Realcon</span>. All rights reserved.
             </p>
             <p className="text-[11px] text-gray-500">
               RERA Compliant Developer • Committed to structural integrity & sustainable living.
@@ -298,7 +298,7 @@ export const Footer6: React.FC<Footer6Props> = ({ className = '' }) => {
             </a>
 
             <a
-              href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=Hello%20Shivaangan%20Realcon%20LLP,%20I%20want%20to%20enquire%20about%20your%20projects.`}
+              href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=Hello%20Shivaangan%20Realcon,%20I%20want%20to%20enquire%20about%20your%20projects.`}
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"

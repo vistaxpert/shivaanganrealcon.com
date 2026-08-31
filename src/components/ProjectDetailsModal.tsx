@@ -9,7 +9,7 @@ interface ProjectDetailsModalProps {
 
 const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({ project, onClose }) => {
   const whatsappUrl = `https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(
-    `Hello Shivaangan Realcon LLP, I am interested in details regarding ${project.title} (${project.location}).`
+    `Hello Shivaangan Realcon, I am interested in details regarding ${project.title} (${project.location}).`
   )}`;
 
   return (

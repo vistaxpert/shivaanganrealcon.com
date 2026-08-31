@@ -1,133 +1,255 @@
 import React from 'react';
-import { CheckCircle2, Award, Users, Calendar, Target, TrendingUp, ShieldCheck, Building2, Phone, MessageCircle } from 'lucide-react';
+import { 
+  CheckCircle2, Award, Users, Calendar, Target, 
+  TrendingUp, ShieldCheck, Building2, Phone, MessageCircle 
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '@/data/companyData';
 
 const About = () => {
-  // Timeline events from PDF extract
+  // Company stats
+  const stats = [
+    { label: "Years of Experience", value: "15+" },
+    { label: "Sq. Ft. Built & Delivered", value: "10L+" },
+    { label: "Happy Families", value: "1,200+" },
+    { label: "Landmark Projects", value: "14+" }
+  ];
+
+  // Core values
+  const coreValues = [
+    {
+      title: "Quality Engineering",
+      description: "We are committed to delivering the highest structural quality, using IS code certified materials and seismic-resistant techniques.",
+      icon: Award
+    },
+    {
+      title: "Integrity & Transparency",
+      description: "We conduct our business with 100% legal clarity, RERA compliance, and ethical practices in all our dealings.",
+      icon: CheckCircle2
+    },
+    {
+      title: "Client Centricity",
+      description: "We believe in working closely with homebuyers and business investors, understanding their needs, and bringing their vision to life.",
+      icon: Users
+    },
+    {
+      title: "Innovative Architecture",
+      description: "We continuously integrate modern elevation aesthetics, rooftop lifestyle amenities, and green building techniques.",
+      icon: TrendingUp
+    },
+    {
+      title: "Reliability & Timelines",
+      description: "We take pride in our consistent delivery on time, maintaining our 15-year reputation for timely project handovers.",
+      icon: Calendar
+    },
+    {
+      title: "CREDAI Leadership",
+      description: "Under the leadership of Er. Rahul Khatmode, President of CREDAI Baramati, we uphold the highest industry benchmarks.",
+      icon: Target
+    }
+  ];
+
+  // Timeline events
   const timeline = [
-    { year: "2010-11", title: "Dattakala College of Engineering", desc: "Completed 52,000 sq. ft. turnkey institutional civil contract." },
+    { year: "2010-11", title: "Dattakala College of Engineering", desc: "Completed 52,000 sq. ft. turnkey institutional civil contracting milestone." },
     { year: "2013-14", title: "Kalamb Art & Science College & Ambalika Sugar", desc: "Executed educational campus and heavy industrial foundations." },
     { year: "2014-15", title: "Nirmiti Park & Nirmiti Capital", desc: "Delivered 74 residential flats (74K sq.ft) & 15.3K sq.ft commercial space near VP Engineering College Baramati." },
     { year: "2017-18", title: "Vrundavan Park Phase 1 & Nirmiti Vihar Phase 1", desc: "Delivered 60 flats + 84 flats & commercial shops in Baramati & Rui." },
-    { year: "2022-23", title: "Vrundavan Park Phase 2 & Vrundavan Commercial", desc: "Launched Phase 2 development (70 flats) and commercial street." },
+    { year: "2022-23", title: "Vrundavan Park Phase 2 & Vrundavan Commercial", desc: "Launched Phase 2 development (70 flats) and commercial shopping arcade." },
     { year: "2023-24", title: "Durga City Mall, K-Square & Nirmiti Vihar Phase 2", desc: "Constructed Baramati's premier 100K sq.ft Durga City Mall, K-Square MIDC commercial complex, and 112 flats." },
     { year: "2024-2026", title: "REGALIA Flagship Landmark", desc: "Unveiling ultra-luxury 2 & 3 BHK residential & commercial icon." }
   ];
 
   return (
     <div>
-      {/* Hero Header */}
-      <section className="bg-shivaangan-navy text-white py-24 md:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2000&q=80")' }}></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-shivaangan-dark via-shivaangan-navy/90 to-shivaangan-dark"></div>
+      {/* Hero Section */}
+      <section className="bg-construction-navy text-white py-24 md:py-32 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20" 
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")' }}
+        ></div>
         <div className="container-custom relative z-10">
-          <div className="max-w-3xl">
-            <span className="text-xs font-bold text-shivaangan-gold uppercase tracking-widest">About Our Developer Brand</span>
-            <h1 className="text-4xl md:text-6xl font-black mb-6 text-white tracking-tight mt-2">
-              Engineering <span className="gold-gradient-text">Excellence</span> & Unshakable Trust
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 font-light leading-relaxed">
-              {COMPANY_INFO.description}
+          <div className="max-w-2xl">
+            <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">About Shivaangan Realcon</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white mt-2">About Us</h1>
+            <p className="text-xl text-white/80">
+              Building excellence through civil engineering precision, quality construction, and 15+ years of dedicated client trust.
             </p>
           </div>
         </div>
       </section>
-
-      {/* Leadership Profile: Er. Rahul Khatmode */}
+      
+      {/* Our Story Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-shivaangan-lightgray">
-                <img 
-                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" 
-                  alt={COMPANY_INFO.director.name}
-                  className="w-full h-[450px] object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-shivaangan-gold text-shivaangan-navy p-5 rounded-xl shadow-xl font-bold max-w-xs">
-                <p className="text-sm uppercase tracking-wider">CREDAI BARAMATI</p>
-                <p className="text-xs font-medium">President Leadership & Oversight</p>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7">
-              <span className="text-xs font-bold text-shivaangan-gold uppercase tracking-widest">Director Spotlight</span>
-              <h2 className="section-title mt-2">{COMPANY_INFO.director.name} ({COMPANY_INFO.director.qualification})</h2>
-              
-              <p className="text-gray-700 mb-4 font-semibold text-lg">
-                {COMPANY_INFO.director.title}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">Leadership & Heritage</span>
+              <h2 className="section-title mt-2">Our Story</h2>
+              <p className="text-construction-gray mb-6">
+                Founded with a strong commitment to quality and transparency, <strong>Shivaangan Realcon</strong> has established itself as a premier name in delivering residential communities, commercial hubs, and turnkey civil infrastructure across Pune and Baramati.
+              </p>
+              <p className="text-construction-gray mb-6">
+                Over the past 15+ years, our leadership has built a formidable reputation based on structural engineering integrity, clear legal titles, timely project completions, and deep-rooted customer trust.
+              </p>
+              <p className="text-construction-gray mb-6">
+                Today, operating from our central Pune corporate office at VTP Trade Park, Undri, we continue to craft architectural landmarks that elevate urban living and business growth.
               </p>
 
-              <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                {COMPANY_INFO.director.bio}
-              </p>
-
-              <h4 className="font-bold text-shivaangan-navy text-sm uppercase tracking-wider mb-3">Associated Organizations & Sister Concerns:</h4>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                {COMPANY_INFO.director.entities.map((entity, index) => (
-                  <div key={index} className="flex items-center gap-2.5 p-3.5 bg-shivaangan-lightgray rounded-lg border border-gray-200 text-xs font-bold text-shivaangan-navy">
-                    <Building2 className="w-4 h-4 text-shivaangan-gold shrink-0" />
-                    <span>{entity}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 pt-2">
                 <a
                   href={`tel:${COMPANY_INFO.director.phone}`}
-                  className="btn-gold py-3 px-6 text-xs uppercase font-bold flex items-center gap-2 shadow-lg"
+                  className="btn-primary inline-flex items-center gap-2 text-sm font-bold"
                 >
-                  <Phone className="w-4 h-4 text-shivaangan-navy" />
-                  Call Office: +91 9767900555
+                  <Phone className="w-4 h-4" />
+                  Call Office: {COMPANY_INFO.director.phone}
                 </a>
                 <a
-                  href={`https://wa.me/${COMPANY_INFO.whatsappNumber}`}
+                  href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=Hello%20Shivaangan%20Realcon,%20I%20would%20like%20to%20connect%20with%20your%20team.`}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white py-3 px-6 rounded-md text-xs uppercase font-bold flex items-center gap-2"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3 rounded-md text-sm font-bold flex items-center gap-2 transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp Direct
                 </a>
               </div>
             </div>
+
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" 
+                alt="Shivaangan Realcon Story" 
+                className="rounded-2xl shadow-xl w-full h-[420px] object-cover"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-construction-navy text-white p-5 rounded-xl shadow-lg border border-shivaangan-amber/40">
+                <p className="font-black text-2xl text-shivaangan-amber">15+ Years</p>
+                <p className="text-xs font-semibold text-gray-200">Excellence in Real Estate & Construction</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Counter Bar */}
-      <section className="py-16 bg-shivaangan-navy text-white border-y border-shivaangan-gold/30">
+      {/* Directors & Leadership Section */}
+      <section className="section-padding bg-slate-50 border-y border-gray-200">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {COMPANY_INFO.stats.map((stat, index) => (
-              <div key={index} className="p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
-                <p className="text-3xl md:text-5xl font-black text-shivaangan-gold mb-2">{stat.value}</p>
-                <p className="text-xs text-gray-300 uppercase tracking-wider font-semibold">{stat.label}</p>
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">
+              Executive Leadership
+            </span>
+            <h2 className="section-title inline-block mt-2">
+              Board of Directors
+            </h2>
+            <p className="text-construction-gray mt-4 text-sm md:text-base leading-relaxed">
+              Meet the visionary minds driving Shivaangan Realcon's strategic excellence, architectural innovation, and customer-first ethos.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            {COMPANY_INFO.directors?.map((director, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl hover:border-shivaangan-amber/60 transition-all duration-300 flex flex-col group"
+              >
+                <div className="relative h-80 overflow-hidden bg-slate-100">
+                  <img 
+                    src={director.image} 
+                    alt={director.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute bottom-4 left-6">
+                    <span className="bg-shivaangan-amber text-shivaangan-charcoal text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full shadow-md">
+                      {director.title}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-6 md:p-8 flex flex-col flex-1 justify-between">
+                  <div>
+                    <h3 className="text-2xl font-black text-shivaangan-charcoal mb-2">
+                      {director.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                      {director.bio}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-semibold">
+                    <span>Shivaangan Realcon</span>
+                    <a
+                      href={`tel:${COMPANY_INFO.director.phone}`}
+                      className="text-shivaangan-terracotta hover:underline font-bold"
+                    >
+                      Connect: {COMPANY_INFO.director.phone}
+                    </a>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Timeline Section */}
-      <section className="section-padding bg-shivaangan-lightgray">
+      
+      {/* Stats Section */}
+      <section className="py-16 bg-construction-navy text-white">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="text-xs font-bold text-shivaangan-gold uppercase tracking-widest">Our Proven Track Record</span>
-            <h2 className="section-title mt-2 inline-block">15-Year Project Timeline</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {stats.map((stat, index) => (
+              <div key={index} className="p-6 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10">
+                <p className="text-3xl md:text-4xl font-black mb-2 text-shivaangan-amber">{stat.value}</p>
+                <p className="text-white/90 text-sm font-medium">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Core Values Section */}
+      <section className="section-padding bg-construction-lightgray">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">Guiding Principles</span>
+            <h2 className="section-title inline-block mt-2">Our Core Values</h2>
+            <p className="text-construction-gray mt-4 max-w-2xl mx-auto text-sm">
+              These principles guide every engineering decision we make and every project we undertake, ensuring consistent quality and client satisfaction.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {coreValues.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:border-shivaangan-amber transition-all">
+                  <div className="bg-construction-navy text-shivaangan-amber p-4 rounded-xl inline-block mb-4 shadow-sm">
+                    <Icon size={26} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-shivaangan-charcoal">{value.title}</h3>
+                  <p className="text-construction-gray text-sm leading-relaxed">{value.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 15-Year Project Timeline Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">Track Record</span>
+            <h2 className="section-title inline-block mt-2">15-Year Development Milestone</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-4xl mx-auto space-y-4">
             {timeline.map((item, index) => (
-              <div key={index} className="flex flex-col md:flex-row gap-4 md:gap-8 bg-white p-6 rounded-xl shadow-md border border-gray-100 items-start hover:border-shivaangan-gold transition-colors">
-                <div className="bg-shivaangan-navy text-shivaangan-gold font-black text-sm px-4 py-2 rounded-lg shrink-0 border border-shivaangan-gold/30">
+              <div key={index} className="flex flex-col sm:flex-row gap-4 p-6 bg-construction-lightgray rounded-xl border border-gray-200 items-start hover:border-shivaangan-amber transition-colors">
+                <div className="bg-construction-navy text-shivaangan-amber font-black text-sm px-4 py-2 rounded-lg shrink-0">
                   {item.year}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-shivaangan-navy mb-1">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-shivaangan-charcoal mb-1">{item.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
@@ -135,33 +257,21 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Core Values */}
-      <section className="section-padding bg-white">
+      
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-shivaangan-terracotta to-shivaangan-amber text-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="text-xs font-bold text-shivaangan-gold uppercase tracking-widest">Guiding Principles</span>
-            <h2 className="section-title mt-2 inline-block">Our Core Values</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
-              <Award className="w-10 h-10 text-shivaangan-gold mb-4" />
-              <h3 className="text-lg font-bold text-shivaangan-navy mb-2">Uncompromising Quality</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Every structural element is inspected under civil engineering standards for earthquake safety and thermal durability.</p>
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-6 md:mb-0">
+              <h2 className="text-3xl font-black">Ready to Work With Us?</h2>
+              <p className="mt-2 text-white/90 text-sm md:text-base">Let's discuss how we can bring your construction or property investment vision to life.</p>
             </div>
-            
-            <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
-              <ShieldCheck className="w-10 h-10 text-shivaangan-gold mb-4" />
-              <h3 className="text-lg font-bold text-shivaangan-navy mb-2">100% Legal Transparency</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Clear title deeds, sanctioned building plans, RERA registration compliance, and smooth banking tie-ups.</p>
-            </div>
-
-            <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
-              <Users className="w-10 h-10 text-shivaangan-gold mb-4" />
-              <h3 className="text-lg font-bold text-shivaangan-navy mb-2">Customer Commitment</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Over 1,200 satisfied families trust us for timely handovers, transparent pricing, and post-possession maintenance support.</p>
-            </div>
+            <Link 
+              to="/contact"
+              className="bg-white text-shivaangan-terracotta hover:bg-white/90 py-3.5 px-8 rounded-md font-bold transition-all shadow-lg hover:scale-105"
+            >
+              Contact Us Today
+            </Link>
           </div>
         </div>
       </section>

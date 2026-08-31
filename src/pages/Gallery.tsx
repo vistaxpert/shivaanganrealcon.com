@@ -45,7 +45,7 @@ const Gallery = () => {
             Project & Construction <span className="gold-gradient-text">Gallery</span>
           </h1>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-            Visual highlights of Shivaangan Realcon LLP landmarks, REGALIA architectural renders, completed townships, and ongoing site developments.
+            Visual highlights of Shivaangan Realcon landmarks, REGALIA architectural renders, completed townships, and ongoing site developments.
           </p>
         </div>
       </section>

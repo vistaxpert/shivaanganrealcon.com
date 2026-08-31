@@ -34,3 +34,6 @@ yarn-error.log*
 
 # Vite
 *.local
+
+# Temporary / reference directory
+temp/

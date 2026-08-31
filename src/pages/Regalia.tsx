@@ -130,7 +130,7 @@ const Regalia = () => {
                 <div>
                   <h2 className="section-title">The Essence of REGALIA</h2>
                   <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-                    REGALIA stands as the pinnacle of refined real estate development in Baramati. Built by Er. Rahul Khatmode & Shivaangan Realcon LLP, every inch of REGALIA is planned to maximize natural ventilation, spatial grandeur, structural longevity, and community wellbeing.
+                    REGALIA stands as the pinnacle of refined real estate development in Baramati. Built by Er. Rahul Khatmode & Shivaangan Realcon, every inch of REGALIA is planned to maximize natural ventilation, spatial grandeur, structural longevity, and community wellbeing.
                   </p>
                 </div>
 
