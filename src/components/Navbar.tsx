@@ -13,7 +13,6 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
@@ -42,24 +41,24 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md py-3' : 'bg-white/95 md:bg-white shadow-sm py-4'
+      isScrolled 
+        ? 'bg-white/70 backdrop-blur-lg shadow-md py-3' 
+        : 'bg-white/20 backdrop-blur-md border-b border-white/20 shadow-sm py-4'
     }`}>
       <div className="container-custom flex justify-between items-center">
-        {/* Brand Logo & Color-Split Brand Name */}
         <Link to="/" className="flex items-center group transition-transform hover:scale-105" aria-label="Shivaangan Realcon Home">
           <ShivaanganLogo variant="light" height={44} />
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`font-medium transition-colors text-sm lg:text-base hover:text-construction-orange ${
+              className={`font-medium transition-colors text-sm lg:text-base hover:text-[#b04c2e] ${
                 location.pathname === link.path 
-                  ? 'text-construction-orange font-bold' 
-                  : 'text-construction-navy'
+                  ? 'text-[#b04c2e] font-bold' 
+                  : 'text-gray-800'
               }`}
             >
               {link.name}
@@ -67,9 +66,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-construction-navy p-1 focus:outline-none"
+          className="md:hidden text-gray-800 p-1 focus:outline-none"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -77,28 +75,27 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-xl absolute top-full left-0 right-0 animate-fade-in">
+        <div className="md:hidden bg-white/90 backdrop-blur-xl border-t border-gray-200 shadow-xl absolute top-full left-0 right-0 animate-fade-in">
           <div className="container-custom py-5 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`font-medium text-base py-1 transition-colors hover:text-construction-orange ${
+                className={`font-medium text-base py-1 transition-colors hover:text-[#b04c2e] ${
                   location.pathname === link.path 
-                    ? 'text-construction-orange font-bold' 
-                    : 'text-construction-navy'
+                    ? 'text-[#b04c2e] font-bold' 
+                    : 'text-gray-800'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="pt-2 border-t border-gray-100">
+            <div className="pt-2 border-t border-gray-200">
               <a
                 href={`tel:${COMPANY_INFO.phone}`}
-                className="btn-primary w-full text-center py-2.5 text-sm font-bold block"
+                className="bg-[#b04c2e] text-white rounded-md w-full text-center py-2.5 text-sm font-bold block"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Call: {COMPANY_INFO.phone}

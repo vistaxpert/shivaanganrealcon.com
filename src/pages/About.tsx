@@ -61,18 +61,26 @@ const About = () => {
   ];
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-construction-navy text-white py-24 md:py-32 relative">
+    <div className="bg-white min-h-screen animate-fade-in">
+      {/* Hero Section - Enlarged and Brightened */}
+      <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[65vh]">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20" 
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")' }}
-        ></div>
-        <div className="container-custom relative z-10">
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">About Shivaangan Realcon</span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white mt-2">About Us</h1>
-            <p className="text-xl text-white/80">
+          className="absolute inset-0 bg-cover bg-center z-0" 
+          style={{ backgroundImage: 'url(/images/building5.png)' }}
+        >
+          {/* Bright white gradient overlay instead of a black shadow/tint */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/10 to-transparent"></div>
+        </div>
+        
+        <div className="container-custom relative z-10 w-full">
+          <div className="max-w-2xl text-left">
+            <span className="text-sm font-bold text-[#FF6600] uppercase tracking-widest block mb-3 animate-fade-in">
+              About Shivaangan Realcon
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-gray-900 leading-tight animate-fade-in" style={{ animationDelay: '100ms' }}>
+              About <span className="text-[#FF6600]">Us</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 font-medium leading-relaxed animate-fade-in max-w-xl" style={{ animationDelay: '200ms' }}>
               Building excellence through civil engineering precision, quality construction, and 15+ years of dedicated client trust.
             </p>
           </div>
@@ -80,26 +88,26 @@ const About = () => {
       </section>
       
       {/* Our Story Section */}
-      <section className="section-padding bg-white">
+      <section className="py-20 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">Leadership & Heritage</span>
-              <h2 className="section-title mt-2">Our Story</h2>
-              <p className="text-construction-gray mb-6">
-                Founded with a strong commitment to quality and transparency, <strong>Shivaangan Realcon</strong> has established itself as a premier name in delivering residential communities, commercial hubs, and turnkey civil infrastructure across Pune and Baramati.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <span className="text-xs font-bold text-[#FF6600] uppercase tracking-widest block mb-2">Leadership & Heritage</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Founded with a strong commitment to quality and transparency, <strong className="text-gray-900">Shivaangan Realcon</strong> has established itself as a premier name in delivering residential communities, commercial hubs, and turnkey civil infrastructure across Pune and Baramati.
               </p>
-              <p className="text-construction-gray mb-6">
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 Over the past 15+ years, our leadership has built a formidable reputation based on structural engineering integrity, clear legal titles, timely project completions, and deep-rooted customer trust.
               </p>
-              <p className="text-construction-gray mb-6">
+              <p className="text-gray-600 mb-8 leading-relaxed">
                 Today, operating from our central Pune corporate office at VTP Trade Park, Undri, we continue to craft architectural landmarks that elevate urban living and business growth.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-4">
                 <a
                   href={`tel:${COMPANY_INFO.director.phone}`}
-                  className="btn-primary inline-flex items-center gap-2 text-sm font-bold"
+                  className="bg-[#FF6600] hover:bg-[#e65c00] text-white px-6 py-3.5 rounded-md text-sm font-bold flex items-center gap-2 shadow-md transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   Call Office: {COMPANY_INFO.director.phone}
@@ -108,7 +116,7 @@ const About = () => {
                   href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=Hello%20Shivaangan%20Realcon,%20I%20would%20like%20to%20connect%20with%20your%20team.`}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3 rounded-md text-sm font-bold flex items-center gap-2 transition-colors"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-md text-sm font-bold flex items-center gap-2 shadow-md transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp Direct
@@ -116,15 +124,15 @@ const About = () => {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative animate-fade-in" style={{ animationDelay: '400ms' }}>
               <img 
                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" 
                 alt="Shivaangan Realcon Story" 
-                className="rounded-2xl shadow-xl w-full h-[420px] object-cover"
+                className="rounded-2xl shadow-xl w-full h-[450px] object-cover"
               />
-              <div className="absolute -bottom-6 -left-6 bg-construction-navy text-white p-5 rounded-xl shadow-lg border border-shivaangan-amber/40">
-                <p className="font-black text-2xl text-shivaangan-amber">15+ Years</p>
-                <p className="text-xs font-semibold text-gray-200">Excellence in Real Estate & Construction</p>
+              <div className="absolute -bottom-6 -left-6 bg-gray-900 text-white p-6 rounded-xl shadow-2xl border border-[#FF6600]/40 transform hover:-translate-y-2 transition-transform">
+                <p className="font-black text-3xl text-[#FF6600] mb-1">15+ Years</p>
+                <p className="text-xs font-medium text-gray-300 uppercase tracking-wider">Excellence in Real Estate</p>
               </div>
             </div>
           </div>
@@ -132,16 +140,16 @@ const About = () => {
       </section>
 
       {/* Directors & Leadership Section */}
-      <section className="section-padding bg-slate-50 border-y border-gray-200">
+      <section className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="container-custom">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">
+          <div className="text-center mb-16 max-w-3xl mx-auto animate-fade-in">
+            <span className="text-xs font-bold text-[#FF6600] uppercase tracking-widest block mb-2">
               Executive Leadership
             </span>
-            <h2 className="section-title inline-block mt-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 inline-block mt-2">
               Board of Directors
             </h2>
-            <p className="text-construction-gray mt-4 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
               Meet the visionary minds driving Shivaangan Realcon's strategic excellence, architectural innovation, and customer-first ethos.
             </p>
           </div>
@@ -150,25 +158,26 @@ const About = () => {
             {COMPANY_INFO.directors?.map((director, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl hover:border-shivaangan-amber/60 transition-all duration-300 flex flex-col group"
+                className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl hover:border-[#FF6600]/50 transition-all duration-300 flex flex-col group animate-fade-in"
+                style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="relative h-80 overflow-hidden bg-slate-100">
+                <div className="relative h-80 overflow-hidden bg-gray-100">
                   <img 
                     src={director.image} 
                     alt={director.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60"></div>
-                  <div className="absolute bottom-4 left-6">
-                    <span className="bg-shivaangan-amber text-shivaangan-charcoal text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full shadow-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
+                  <div className="absolute bottom-5 left-6">
+                    <span className="bg-[#FF6600] text-white text-xs uppercase tracking-wider font-bold px-4 py-1.5 rounded-full shadow-md">
                       {director.title}
                     </span>
                   </div>
                 </div>
 
-                <div className="p-6 md:p-8 flex flex-col flex-1 justify-between">
+                <div className="p-8 flex flex-col flex-1 justify-between">
                   <div>
-                    <h3 className="text-2xl font-black text-shivaangan-charcoal mb-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#FF6600] transition-colors">
                       {director.name}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-6">
@@ -176,11 +185,11 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-semibold">
+                  <div className="pt-5 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-medium">
                     <span>Shivaangan Realcon</span>
                     <a
                       href={`tel:${COMPANY_INFO.director.phone}`}
-                      className="text-shivaangan-terracotta hover:underline font-bold"
+                      className="text-[#FF6600] hover:text-gray-900 font-bold transition-colors"
                     >
                       Connect: {COMPANY_INFO.director.phone}
                     </a>
@@ -193,13 +202,18 @@ const About = () => {
       </section>
       
       {/* Stats Section */}
-      <section className="py-16 bg-construction-navy text-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <section className="py-20 bg-gray-900 text-white relative">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="container-custom relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
-              <div key={index} className="p-6 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10">
-                <p className="text-3xl md:text-4xl font-black mb-2 text-shivaangan-amber">{stat.value}</p>
-                <p className="text-white/90 text-sm font-medium">{stat.label}</p>
+              <div 
+                key={index} 
+                className="p-8 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors animate-fade-in"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <p className="text-4xl md:text-5xl font-black mb-3 text-[#FF6600] drop-shadow-md">{stat.value}</p>
+                <p className="text-gray-300 text-sm font-semibold uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -207,12 +221,12 @@ const About = () => {
       </section>
       
       {/* Core Values Section */}
-      <section className="section-padding bg-construction-lightgray">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">Guiding Principles</span>
-            <h2 className="section-title inline-block mt-2">Our Core Values</h2>
-            <p className="text-construction-gray mt-4 max-w-2xl mx-auto text-sm">
+          <div className="text-center mb-16 animate-fade-in">
+            <span className="text-xs font-bold text-[#FF6600] uppercase tracking-widest block mb-2">Guiding Principles</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 inline-block mt-2">Our Core Values</h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
               These principles guide every engineering decision we make and every project we undertake, ensuring consistent quality and client satisfaction.
             </p>
           </div>
@@ -221,12 +235,16 @@ const About = () => {
             {coreValues.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:border-shivaangan-amber transition-all">
-                  <div className="bg-construction-navy text-shivaangan-amber p-4 rounded-xl inline-block mb-4 shadow-sm">
+                <div 
+                  key={index} 
+                  className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-[#FF6600]/50 hover:-translate-y-2 transition-all duration-300 group animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="bg-gray-900 text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white p-4 rounded-xl inline-block mb-6 shadow-sm transition-colors duration-300">
                     <Icon size={26} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-shivaangan-charcoal">{value.title}</h3>
-                  <p className="text-construction-gray text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-[#FF6600] transition-colors">{value.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
                 </div>
               );
             })}
@@ -235,22 +253,26 @@ const About = () => {
       </section>
 
       {/* 15-Year Project Timeline Section */}
-      <section className="section-padding bg-white">
+      <section className="py-20 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="text-xs font-bold text-shivaangan-amber uppercase tracking-widest">Track Record</span>
-            <h2 className="section-title inline-block mt-2">15-Year Development Milestone</h2>
+          <div className="text-center mb-16 animate-fade-in">
+            <span className="text-xs font-bold text-[#FF6600] uppercase tracking-widest block mb-2">Track Record</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 inline-block mt-2">15-Year Development Milestone</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="max-w-4xl mx-auto space-y-6">
             {timeline.map((item, index) => (
-              <div key={index} className="flex flex-col sm:flex-row gap-4 p-6 bg-construction-lightgray rounded-xl border border-gray-200 items-start hover:border-shivaangan-amber transition-colors">
-                <div className="bg-construction-navy text-shivaangan-amber font-black text-sm px-4 py-2 rounded-lg shrink-0">
+              <div 
+                key={index} 
+                className="flex flex-col sm:flex-row gap-6 p-6 bg-gray-50 rounded-2xl border border-gray-200 items-start hover:border-[#FF6600]/50 hover:shadow-lg transition-all animate-fade-in group"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="bg-gray-900 text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-colors font-black text-sm px-5 py-2.5 rounded-lg shrink-0 shadow-sm">
                   {item.year}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-shivaangan-charcoal mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#FF6600] transition-colors">{item.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed font-medium">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -259,16 +281,17 @@ const About = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-shivaangan-terracotta to-shivaangan-amber text-white">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-6 md:mb-0">
-              <h2 className="text-3xl font-black">Ready to Work With Us?</h2>
-              <p className="mt-2 text-white/90 text-sm md:text-base">Let's discuss how we can bring your construction or property investment vision to life.</p>
+      <section className="py-16 bg-[#FF6600] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="container-custom relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 animate-fade-in">
+            <div className="mb-6 md:mb-0 max-w-2xl text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Ready to Work With Us?</h2>
+              <p className="mt-3 text-white/90 text-sm md:text-base font-medium">Let's discuss how we can bring your construction or property investment vision to life.</p>
             </div>
             <Link 
               to="/contact"
-              className="bg-white text-shivaangan-terracotta hover:bg-white/90 py-3.5 px-8 rounded-md font-bold transition-all shadow-lg hover:scale-105"
+              className="bg-white text-[#FF6600] hover:bg-gray-100 py-4 px-10 rounded-md font-bold transition-all shadow-lg hover:scale-105 whitespace-nowrap"
             >
               Contact Us Today
             </Link>
