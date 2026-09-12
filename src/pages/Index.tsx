@@ -92,7 +92,7 @@ const Index = () => {
               </h2>
 
               <p className="text-gray-600 mb-5 leading-relaxed font-medium">
-                Led by visionary directors <strong className="text-gray-900">Amit Sanas</strong> and <strong className="text-gray-900">Rupesh Hande</strong>, Shivaangan Realcon has established itself as a premier name in delivering high-quality residential communities, commercial landmarks, and turnkey construction projects across Pune and Maharashtra.
+                Led by visionary Director <strong className="text-gray-900">Mr. Amit Sanas</strong> and <strong className="text-gray-900">Mr. Rupesh Hande</strong>, Shivaangan Realcon has established itself as a premier name in delivering high-quality residential communities, commercial landmarks, and turnkey construction projects across Pune and Maharashtra.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 With 15+ years of combined industry expertise, we bring architectural precision, ethical transparency, clear legal titles, and timely delivery to every single square foot we build.
