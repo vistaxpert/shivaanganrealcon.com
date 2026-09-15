@@ -44,7 +44,7 @@ const About = () => {
     },
     {
       title: "CREDAI Leadership",
-      description: "Under the leadership of Er. Rahul Khatmode, President of CREDAI Baramati, we uphold the highest industry benchmarks.",
+      description: "Under the leadership of Er. Rahul Khatmode, President of CREDAI Undri, we uphold the highest industry benchmarks.",
       icon: Target
     }
   ];
@@ -53,10 +53,10 @@ const About = () => {
   const timeline = [
     { year: "2010-11", title: "Dattakala College of Engineering", desc: "Completed 52,000 sq. ft. turnkey institutional civil contracting milestone." },
     { year: "2013-14", title: "Kalamb Art & Science College & Ambalika Sugar", desc: "Executed educational campus and heavy industrial foundations." },
-    { year: "2014-15", title: "Nirmiti Park & Nirmiti Capital", desc: "Delivered 74 residential flats (74K sq.ft) & 15.3K sq.ft commercial space near VP Engineering College Baramati." },
-    { year: "2017-18", title: "Vrundavan Park Phase 1 & Nirmiti Vihar Phase 1", desc: "Delivered 60 flats + 84 flats & commercial shops in Baramati & Rui." },
+    { year: "2014-15", title: "Nirmiti Park & Nirmiti Capital", desc: "Delivered 74 residential flats (74K sq.ft) & 15.3K sq.ft commercial space near VP Engineering College Undri." },
+    { year: "2017-18", title: "Vrundavan Park Phase 1 & Nirmiti Vihar Phase 1", desc: "Delivered 60 flats + 84 flats & commercial shops in Undri & Rui." },
     { year: "2022-23", title: "Vrundavan Park Phase 2 & Vrundavan Commercial", desc: "Launched Phase 2 development (70 flats) and commercial shopping arcade." },
-    { year: "2023-24", title: "Durga City Mall, K-Square & Nirmiti Vihar Phase 2", desc: "Constructed Baramati's premier 100K sq.ft Durga City Mall, K-Square MIDC commercial complex, and 112 flats." },
+    { year: "2023-24", title: "Durga City Mall, K-Square & Nirmiti Vihar Phase 2", desc: "Constructed Undri's premier 100K sq.ft Durga City Mall, K-Square MIDC commercial complex, and 112 flats." },
     { year: "2024-2026", title: "REGALIA Flagship Landmark", desc: "Unveiling ultra-luxury 2 & 3 BHK residential & commercial icon." }
   ];
 
@@ -95,7 +95,7 @@ const About = () => {
               <span className="text-xs font-bold text-[#FF6600] uppercase tracking-widest block mb-2">Leadership & Heritage</span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Founded with a strong commitment to quality and transparency, <strong className="text-gray-900">Shivaangan Realcon</strong> has established itself as a premier name in delivering residential communities, commercial hubs, and turnkey civil infrastructure across Pune and Baramati.
+                Founded with a strong commitment to quality and transparency, <strong className="text-gray-900">Shivaangan Realcon</strong> has established itself as a premier name in delivering residential communities, commercial hubs, and turnkey civil infrastructure across Pune and Undri.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Over the past 15+ years, our leadership has built a formidable reputation based on structural engineering integrity, clear legal titles, timely project completions, and deep-rooted customer trust.
@@ -161,13 +161,14 @@ const About = () => {
                 className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl hover:border-[#FF6600]/50 transition-all duration-300 flex flex-col group animate-fade-in"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="relative h-80 overflow-hidden bg-gray-100">
+                {/* Increased height to h-[22rem] md:h-96 and changed object position to top to fix "zoomed-in" look */}
+                <div className="relative h-[22rem] md:h-96 overflow-hidden bg-gray-200">
                   <img 
-                    src={director.image} 
+                    src={index === 0 ? '/images/a2.png' : index === 1 ? '/images/b2.png' : director.image} 
                     alt={director.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80"></div>
                   <div className="absolute bottom-5 left-6">
                     <span className="bg-[#FF6600] text-white text-xs uppercase tracking-wider font-bold px-4 py-1.5 rounded-full shadow-md">
                       {director.title}

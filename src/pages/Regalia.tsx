@@ -223,7 +223,6 @@ const Regalia = () => {
               <div className="space-y-4 pt-2">
                 {[
                   "Modern architecture, intelligent space planning & maximum privacy.",
-                  "Spacious interiors with private outdoor areas & curated lagunas.",
                   "Wide internal paved roads with seamless access to premium amenities.",
                   "A like-minded elite community defined by peace, prestige, and power."
                 ].map((item, idx) => (
