@@ -183,11 +183,11 @@ const Regalia = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="border-r border-emerald-800/60 last:border-0 pr-4">
               <p className="text-xs text-[#FF6600] uppercase tracking-widest font-bold mb-1">Configuration</p>
-              <p className="text-lg font-bold text-white">4.5 BHK Luxury Row Villas</p>
+              <p className="text-lg font-bold text-white">4.5 BHK Luxury Homes</p>
             </div>
             <div className="border-r border-emerald-800/60 last:border-0 pr-4">
               <p className="text-xs text-[#FF6600] uppercase tracking-widest font-bold mb-1">Total Usable Area</p>
-              <p className="text-lg font-bold text-white">Up to 4,240 Sq. Ft.</p>
+              <p className="text-lg font-bold text-white">Starts From 4,240 Sq. Ft.</p>
             </div>
             <div className="border-r border-emerald-800/60 last:border-0 pr-4">
               <p className="text-xs text-[#FF6600] uppercase tracking-widest font-bold mb-1">Location</p>
