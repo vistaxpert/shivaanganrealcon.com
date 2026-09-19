@@ -150,7 +150,7 @@ const Regalia = () => {
             </motion.h1>
             
             <motion.p variants={fadeInUp} className="text-lg md:text-xl text-gray-700 mb-4 font-semibold">
-              4 BHK Ultra-Luxury Row Villas in Undri, Pune
+              4.5 BHK Ultra-Luxury Row Villas in Undri, Pune
             </motion.p>
 
             <motion.p variants={fadeInUp} className="text-sm md:text-base text-gray-600 mb-8 leading-relaxed">
@@ -183,7 +183,7 @@ const Regalia = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="border-r border-emerald-800/60 last:border-0 pr-4">
               <p className="text-xs text-[#FF6600] uppercase tracking-widest font-bold mb-1">Configuration</p>
-              <p className="text-lg font-bold text-white">4.5 BHK Luxury Homes</p>
+              <p className="text-lg font-bold text-white">4.5 BHK Ultra Luxury Homes</p>
             </div>
             <div className="border-r border-emerald-800/60 last:border-0 pr-4">
               <p className="text-xs text-[#FF6600] uppercase tracking-widest font-bold mb-1">Total Usable Area</p>
@@ -195,7 +195,7 @@ const Regalia = () => {
             </div>
             <div>
               <p className="text-xs text-[#FF6600] uppercase tracking-widest font-bold mb-1">Special Features</p>
-              <p className="text-lg font-bold text-white">Private Lift & Jacuzzi</p>
+              <p className="text-lg font-bold text-white">Private Lift & Air Conditioner</p>
             </div>
           </div>
         </div>
@@ -282,13 +282,13 @@ const Regalia = () => {
           >
             {[
               { title: "VRV/VRF Air Conditioning", desc: "Provision in Living Room & All Bedrooms for ideal climate control." },
-              { title: "Private Passenger Lift", desc: "Provision for 8-passenger high-speed lift inside every villa." },
+              { title: "Private Passenger Lift", desc: "Provision for passenger high-speed lift inside every villa." },
               { title: "EV Charging Infrastructure", desc: "Dedicated charging stations for 2 & 4 wheeler electric vehicles." },
               { title: "Smart Home Security", desc: "Digital door lock, Video Door Phone & 24x7 CCTV Surveillance." },
-              { title: "Multipurpose Hall & Club", desc: "Ground floor community hall & clubhouse for celebrations." },
+              { title: "Multipurpose Hall", desc: "Ground floor community hall & used for celebrations." },
               { title: "Renewable Solar Energy", desc: "Solar panel connection for water heating & common area lighting." },
               { title: "Designer Entrance Lobby", desc: "Grand main gates with access control and security cabin." },
-              { title: "Piped LPG Gas Bank", desc: "Centralized safe LPG gas bank system piped directly to kitchens." },
+              // { title: "Piped LPG Gas Bank", desc: "Centralized safe LPG gas bank system piped directly to kitchens." },
               { title: "Smart Parcel Lockers", desc: "Contactless safe delivery lockers at the main entrance." }
             ].map((amenity, idx) => (
               <motion.div 
@@ -322,7 +322,7 @@ const Regalia = () => {
                 category: "Structure & Masonry",
                 items: [
                   "Earthquake Resistant RCC Frame Structure",
-                  "Internal & External 6\" AAC Block Masonry",
+                  "Internal & External 6\" red brick",
                   "Gypsum / Smooth Finish Plaster Internally",
                   "Double Coat Sand Faced External Plaster"
                 ]
@@ -339,7 +339,7 @@ const Regalia = () => {
               {
                 category: "Kitchen & Dry Balcony",
                 items: [
-                  "Granite / Quartz Countertop with Stainless Steel Sink",
+                  "Quartz Countertop with quartz Sink",
                   "Provision for Exhaust Fan & Water Purifier",
                   "Dado Tiles up to Lintel Level",
                   "Provision for Dishwasher & Washing Machine"
@@ -357,10 +357,10 @@ const Regalia = () => {
               {
                 category: "Electrical & Plumbing",
                 items: [
-                  "Concealed Fire-Resistant Copper Wiring (Polycab / Finolex)",
+                  "Concealed Fire-Resistant Copper Wiring",
                   "Modular Switches (Legrand / Anchor)",
-                  "Jaguar / Kohler Wall-Hung WCs & CP Fittings",
-                  "Solar Hot Water Connection in Bathrooms"
+                  "Jaguar Wall-Hung WCs & CP Fittings",
+                  // "Solar Hot Water Connection in Bathrooms"
                 ]
               },
               {

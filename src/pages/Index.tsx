@@ -15,10 +15,23 @@ import { COMPANY_INFO, REGALIA_PROJECT, PROJECTS_LIST } from '@/data/companyData
 const Index = () => {
   const { openModal } = useModal();
 
-  const featuredProjects = [
-    REGALIA_PROJECT,
-    ...PROJECTS_LIST.filter(p => p.id !== 'regalia').slice(0, 5)
-  ];
+  // Custom sorting logic based on the requested specific order
+  const getSortOrder = (title: string) => {
+    const t = title.toLowerCase();
+    if (t.includes('durga')) return 1;
+    if (t.includes('k-square') || t.includes('k square')) return 2;
+    if (t.includes('vrundavan commercial') || t.includes('vrindawan commercial')) return 3;
+    if (t.includes('nirmiti') && (t.includes('1') || t.includes('park'))) return 4; // Nirmiti Phase 1
+    if (t.includes('vrundavan') && t.includes('1')) return 5; // Vrundavan Park Phase 1
+    if (t.includes('vrundavan') && t.includes('2')) return 6; // Vrundavan Park Phase 2
+    if (t.includes('nirmiti') && t.includes('2')) return 7; // Nirmiti Vihar Phase 2
+    return 99; // Remaining projects go to the end
+  };
+
+  // Sort projects and take only the first 6 for the home page
+  const featuredProjects = [...PROJECTS_LIST]
+    .sort((a, b) => getSortOrder(a.title) - getSortOrder(b.title))
+    .slice(0, 6);
 
   const services = [
     {
@@ -32,11 +45,6 @@ const Index = () => {
       icon: Building
     },
     {
-      title: "Turnkey Civil Contracting",
-      description: "Executing large-scale educational campuses, government facilities, and industrial civil contracts with precision engineering.",
-      icon: Hammer
-    },
-    {
       title: "Architecture & Urban Planning",
       description: "Transforming urban spaces into modern architectural landmarks with maximum space utilization and Vastu balance.",
       icon: Ruler
@@ -45,11 +53,6 @@ const Index = () => {
       title: "Investment & Real Estate Advisory",
       description: "Guiding investors and homebuyers toward high-appreciation properties backed by clear legal titles and strong yields.",
       icon: TrendingUp
-    },
-    {
-      title: "Quality Civil Engineering",
-      description: "Under the leadership of Er. Rahul Khatmode (B.E. Civil), ensuring structural safety, seismic resistance, and IS code compliance.",
-      icon: Award
     }
   ];
 
@@ -152,13 +155,13 @@ const Index = () => {
               </h2>
 
               <p className="text-gray-300 text-base md:text-lg mb-8 leading-relaxed max-w-xl">
-                Experience ultra-luxurious <strong className="text-white">4.5 BHK Row Villas</strong> in Undri. Featuring private gardens, Vastu-compliant layouts, earthquake-resistant RCC frame engineering, and 20+ lifestyle amenities.
+                Experience ultra-luxurious <strong className="text-white">4.5 BHK Row Villas</strong> in Undri. Featuring private gardens, Vastu-compliant layouts, earthquake-resistant RCC frame engineering.
               </p>
               
               <div className="flex flex-wrap gap-3 mb-10 text-xs font-bold text-[#FF6600]">
                 <span className="bg-white/10 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm shadow-sm">4.5 BHK Ultra Luxury</span>
                 <span className="bg-white/10 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm shadow-sm">Prime Undri Location</span>
-                <span className="bg-white/10 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm shadow-sm">Private Gardens</span>
+                <span className="bg-white/10 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm shadow-sm">Private Lifts</span>
                 <span className="bg-white/10 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm shadow-sm">24×7 Smart Security</span>
               </div>
 
@@ -209,19 +212,20 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Centered 2x2 Grid for 4 Items */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
             {services.map((service, index) => (
               <div 
                 key={index}
                 className="animate-fade-in"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
-                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-[#FF6600]/50 hover:-translate-y-2 transition-all duration-300 h-full">
-                  <div className="bg-gray-50 text-[#FF6600] p-4 rounded-xl inline-block mb-6 border border-gray-100">
-                    <service.icon size={28} />
+                <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-lg border border-gray-100 hover:border-[#FF6600]/50 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col items-center text-center">
+                  <div className="bg-gray-50 text-[#FF6600] p-5 rounded-2xl mb-6 border border-gray-100 shadow-sm">
+                    <service.icon size={32} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">{service.description}</p>
                 </div>
               </div>
             ))}
@@ -248,7 +252,7 @@ const Index = () => {
               to="/projects" 
               className="inline-flex items-center text-gray-900 font-bold hover:text-[#FF6600] transition-colors group bg-gray-50 px-6 py-3 rounded-full border border-gray-200 hover:border-[#FF6600]/30"
             >
-              View All 14+ Projects
+              View All Projects
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

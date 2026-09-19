@@ -93,11 +93,11 @@ const ChannelPartners: React.FC = () => {
       title: "Attractive & Timely Brokerage",
       desc: "Lucrative commission slabs with transparent and predictable payout release schedules."
     },
-    {
-      icon: Award,
-      title: "CREDAI Baramati Backing",
-      desc: "Direct leadership of Er. Rahul Khatmode, President CREDAI Baramati, guaranteeing utmost ethical dealing."
-    },
+    // {
+    //   icon: Award,
+    //   title: "CREDAI Undri Backing",
+    //   desc: "Direct leadership of Er. Rahul Khatmode, President CREDAI Undri, guaranteeing utmost ethical dealing."
+    // },
     {
       icon: Users,
       title: "Dedicated CP Desk & RM",
@@ -113,11 +113,11 @@ const ChannelPartners: React.FC = () => {
       title: "100% Clear Titles & Bank Tie-ups",
       desc: "RERA registered projects with leading national bank approvals ensuring fast loan sanctioning for your clients."
     },
-    {
-      icon: TrendingUp,
-      title: "Exclusive Launch Access",
-      desc: "First-look inventory and pre-launch pricing advantages on flagship developments like REGALIA."
-    }
+    // {
+    //   icon: TrendingUp,
+    //   title: "Exclusive Launch Access",
+    //   desc: "First-look inventory and pre-launch pricing advantages on flagship developments like REGALIA."
+    // }
   ];
 
   return (
@@ -143,7 +143,7 @@ const ChannelPartners: React.FC = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-200 mb-8 font-medium leading-relaxed max-w-2xl mx-auto animate-fade-in drop-shadow-md" style={{ animationDelay: '200ms' }}>
-            Partner with <strong className="text-white font-bold">Shivaangan Realcon</strong>. Grow your real estate network and monetize high-demand residential and commercial projects across Pune and Baramati.
+            Partner with <strong className="text-white font-bold">Shivaangan Realcon</strong>. Grow your real estate network and monetize high-demand residential and commercial projects across Pune and Undri.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-xs font-semibold text-gray-100 animate-fade-in" style={{ animationDelay: '300ms' }}>
@@ -175,24 +175,23 @@ const ChannelPartners: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Centered 2x2 Grid for 4 Items */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
               <div 
                 key={index} 
-                className="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:border-[#FF6600]/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between animate-fade-in"
+                className="bg-gray-50 p-8 lg:p-10 rounded-3xl border border-gray-200 hover:border-[#FF6600]/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex flex-col items-center text-center animate-fade-in h-full"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div>
-                  <div className="bg-gray-900 text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white p-4 rounded-xl inline-block mb-5 transition-colors duration-300 shadow-sm">
-                    <benefit.icon size={26} />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-[#FF6600] transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {benefit.desc}
-                  </p>
+                <div className="bg-gray-900 text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white p-5 rounded-2xl mb-6 transition-colors duration-300 shadow-sm border border-gray-100">
+                  <benefit.icon size={32} />
                 </div>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-900 group-hover:text-[#FF6600] transition-colors">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  {benefit.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -387,7 +386,7 @@ const ChannelPartners: React.FC = () => {
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6600] text-sm text-gray-700 transition-shadow"
                       >
                         <option value="">Select Operational Region</option>
-                        <option value="Baramati & Rural Pune">Baramati & Rural Pune</option>
+                        <option value="Undri & Rural Pune">Undri & Rural Pune</option>
                         <option value="East Of Pune">East Of Pune (Hadapsar, Kharadi, Wagholi)</option>
                         <option value="West Of Pune">West Of Pune (Kothrud, Baner, Wakad, Hinjewadi)</option>
                         <option value="South Of Pune">South Of Pune (Kondhwa, Undri, Katraj)</option>
@@ -408,7 +407,7 @@ const ChannelPartners: React.FC = () => {
                         required
                         value={formData.workingArea}
                         onChange={handleChange}
-                        placeholder="e.g. Baramati MIDC, Kothrud, Katraj, Hadapsar"
+                        placeholder="e.g. Undri MIDC, Kothrud, Katraj, Hadapsar"
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6600] text-sm transition-shadow"
                       />
                     </div>
@@ -426,20 +425,20 @@ const ChannelPartners: React.FC = () => {
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6600] text-sm text-gray-700 transition-shadow font-medium"
                       >
                         <option value="All Shivaangan Projects">All Shivaangan Realcon Projects</option>
-                        <option value="REGALIA (Baramati) - Ultra Luxury 2 & 3 BHK">
-                          REGALIA (Baramati) - Ultra Luxury 2 & 3 BHK
+                        <option value="REGALIA (Undri) - Ultra Luxury 2 & 3 BHK">
+                          REGALIA (Undri) - Ultra Luxury 2 & 3 BHK
                         </option>
                         <option value="Durga City Mall - Commercial Retail & Food Court">
                           Durga City Mall - Mega Commercial Hub
                         </option>
                         <option value="Nirmiti Vihar Phase 2 - 112 Luxury Flats">
-                          Nirmiti Vihar Phase 2 (MIDC Baramati)
+                          Nirmiti Vihar Phase 2 (MIDC Undri)
                         </option>
                         <option value="Vrundavan Park Phase 2 - 70 Premium Flats">
-                          Vrundavan Park Phase 2 (Kasaba Baramati)
+                          Vrundavan Park Phase 2 (Kasaba Undri)
                         </option>
                         <option value="K-Square Commercial Building">
-                          K-Square Commercial (MIDC Baramati)
+                          K-Square Commercial (MIDC Undri)
                         </option>
                       </select>
                     </div>
@@ -576,7 +575,7 @@ const ChannelPartners: React.FC = () => {
                 Need Immediate Channel Partner Assistance?
               </h2>
               <p className="text-white/90 text-sm sm:text-base font-medium">
-                Call our direct Channel Partner Relationship desk or reach out to our Baramati / Pune headquarters.
+                Call our direct Channel Partner Relationship desk or reach out to our Undri / Pune headquarters.
               </p>
             </div>
 

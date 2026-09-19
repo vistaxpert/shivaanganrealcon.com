@@ -29,13 +29,13 @@ export const COMPANY_INFO = {
   ],
   directors: [
     {
-      name: "Amit Sanas",
+      name: "Mr. Amit Sanas",
       title: "Director",
       image: "/images/directors/amit_sanas.jpg",
       bio: "A dynamic leader and visionary real estate entrepreneur driving strategic project execution, high-quality development standards, and customer trust across Shivaangan Realcon."
     },
     {
-      name: "Rupesh Hande",
+      name: "Mr. Rupesh Hande",
       title: "Director",
       image: "/images/directors/rupesh_hande.jpg",
       bio: "An accomplished real estate visionary overseeing architectural innovation, strategic business expansion, land acquisition, and landmark development for Shivaangan Realcon."
@@ -72,11 +72,11 @@ export const REGALIA_PROJECT: ProjectItem & {
   title: "REGALIA",
   category: "Residential",
   status: "Ongoing",
-  location: "Prime Location, Baramati",
+  location: "Prime Location, Undri",
   area: "1,50,000+ Sq. Ft.",
   year: "2024-2026",
   units: "2 & 3 BHK Luxury Residences & Commercial Spaces",
-  image: "/images/Durga City Mall.png",
+  image: "/images/regalia.png",
   description: "REGALIA is the crown jewel of Shivaangan Realcon. Designed for discerning homebuyers, REGALIA combines contemporary ultra-luxury architecture, sky-level lifestyle amenities, lush green landscapes, and uncompromised structural engineering.",
   highlights: [
     "Grand Entrance Plaza with 24/7 Multi-tier Security",
@@ -270,45 +270,45 @@ export const PROJECTS_LIST: ProjectItem[] = [
     description: "Boutique residential building featuring 28 spacious apartments in a tranquil neighborhood.",
     amenities: ["Covered Parking", "Security", "Water Supply"]
   },
-  {
-    id: "dattakala-college",
-    title: "Dattakala College of Engineering",
-    category: "Contracting",
-    status: "Completed",
-    location: "Swami Chincholi, Tal Daund, Dist Pune",
-    area: "52,000 Sq. Ft.",
-    year: "2010-2011",
-    units: "Institutional Educational Building",
-    image: "/images/Cocoons Market & Training Center.png",
-    description: "Major contracting milestone delivering 52,000 sq. ft. of engineering college academic infrastructure.",
-    amenities: ["Laboratories", "Lecture Halls", "Auditorium Block"]
-  },
-  {
-    id: "kalamb-college",
-    title: "Kalamb Art & Science College",
-    category: "Contracting",
-    status: "Completed",
-    location: "Kalamb, Tal. Indapur, Dist Pune",
-    area: "14,000 Sq. Ft.",
-    year: "2013-2014",
-    units: "Educational Campus",
-    image: "/images/Cocoons Market & Training Center.png",
-    description: "Turnkey educational contracting project completed on schedule with strict adherence to structural norms.",
-    amenities: ["Classrooms", "Administrative Wing"]
-  },
-  {
-    id: "ambalika-sugar",
-    title: "Ambalika Sugar Ltd.",
-    category: "Contracting",
-    status: "Completed",
-    location: "Baradgaon, Tal Karjat, Dist Ahamadnagar",
-    area: "41,500 Sq. Ft.",
-    year: "2013-2014",
-    units: "Industrial Infrastructure Sub-Contract",
-    image: "/images/Commercial Building.png",
-    description: "Industrial civil sub-contracting project involving heavy structural concrete work and specialized foundations.",
-    amenities: ["Heavy Industrial Foundation", "RCC Structures"]
-  }
+  // {
+  //   id: "dattakala-college",
+  //   title: "Dattakala College of Engineering",
+  //   category: "Contracting",
+  //   status: "Completed",
+  //   location: "Swami Chincholi, Tal Daund, Dist Pune",
+  //   area: "52,000 Sq. Ft.",
+  //   year: "2010-2011",
+  //   units: "Institutional Educational Building",
+  //   image: "/images/Cocoons Market & Training Center.png",
+  //   description: "Major contracting milestone delivering 52,000 sq. ft. of engineering college academic infrastructure.",
+  //   amenities: ["Laboratories", "Lecture Halls", "Auditorium Block"]
+  // },
+  // {
+  //   id: "kalamb-college",
+  //   title: "Kalamb Art & Science College",
+  //   category: "Contracting",
+  //   status: "Completed",
+  //   location: "Kalamb, Tal. Indapur, Dist Pune",
+  //   area: "14,000 Sq. Ft.",
+  //   year: "2013-2014",
+  //   units: "Educational Campus",
+  //   image: "/images/Cocoons Market & Training Center.png",
+  //   description: "Turnkey educational contracting project completed on schedule with strict adherence to structural norms.",
+  //   amenities: ["Classrooms", "Administrative Wing"]
+  // },
+  // {
+  //   id: "ambalika-sugar",
+  //   title: "Ambalika Sugar Ltd.",
+  //   category: "Contracting",
+  //   status: "Completed",
+  //   location: "Baradgaon, Tal Karjat, Dist Ahamadnagar",
+  //   area: "41,500 Sq. Ft.",
+  //   year: "2013-2014",
+  //   units: "Industrial Infrastructure Sub-Contract",
+  //   image: "/images/Commercial Building.png",
+  //   description: "Industrial civil sub-contracting project involving heavy structural concrete work and specialized foundations.",
+  //   amenities: ["Heavy Industrial Foundation", "RCC Structures"]
+  // }
 ];
 
 export const SERVICES_LIST = [

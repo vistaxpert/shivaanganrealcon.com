@@ -15,7 +15,23 @@ const Projects = () => {
 
   const categories = ["All", "Ongoing", "Completed"];
 
-  const filteredProjects = PROJECTS_LIST.filter(project => {
+  // Custom sorting logic based on the requested specific order
+  const getSortOrder = (title: string) => {
+    const t = title.toLowerCase();
+    if (t.includes('durga')) return 1;
+    if (t.includes('k-square') || t.includes('k square')) return 2;
+    if (t.includes('vrundavan commercial') || t.includes('vrindawan commercial')) return 3;
+    if (t.includes('nirmiti') && (t.includes('1') || t.includes('park'))) return 4; // Nirmiti Phase 1
+    if (t.includes('vrundavan') && t.includes('1')) return 5; // Vrundavan Park Phase 1
+    if (t.includes('vrundavan') && t.includes('2')) return 6; // Vrundavan Park Phase 2
+    if (t.includes('nirmiti') && t.includes('2')) return 7; // Nirmiti Vihar Phase 2
+    return 99; // Remaining projects (e.g., Regalia) go to the end
+  };
+
+  // Sort projects first, then apply the active filter
+  const sortedProjects = [...PROJECTS_LIST].sort((a, b) => getSortOrder(a.title) - getSortOrder(b.title));
+
+  const filteredProjects = sortedProjects.filter(project => {
     if (activeFilter === 'All') return true;
     if (activeFilter === 'Ongoing') return project.status === 'Ongoing';
     if (activeFilter === 'Completed') return project.status === 'Completed';

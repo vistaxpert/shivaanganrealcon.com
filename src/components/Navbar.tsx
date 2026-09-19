@@ -57,7 +57,7 @@ const Navbar = () => {
               to={link.path}
               className={`transition-all duration-300 text-sm lg:text-base flex items-center gap-1.5 ${
                 link.highlight 
-                  ? 'bg-[#FF6600]/10 text-[#FF6600] font-black px-4 py-2 rounded-full border border-[#FF6600]/30 hover:bg-[#FF6600]/20 hover:scale-105 animate-pulse shadow-sm' 
+                  ? 'bg-gray-900 text-[#FF6600] font-black px-5 py-2.5 rounded-full border border-gray-800 shadow-md hover:bg-black hover:border-[#FF6600]/50 hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_4px_15px_rgba(255,102,0,0.3)] group' 
                   : `font-medium hover:text-[#FF6600] ${
                       location.pathname === link.path 
                         ? 'text-[#FF6600] font-bold' 
@@ -65,7 +65,7 @@ const Navbar = () => {
                     }`
               }`}
             >
-              {link.highlight && <Sparkles className="w-3.5 h-3.5" />}
+              {link.highlight && <Sparkles className="w-4 h-4 animate-pulse" />}
               {link.name}
             </Link>
           ))}
@@ -89,7 +89,7 @@ const Navbar = () => {
                 to={link.path}
                 className={`py-2 transition-all duration-300 flex items-center gap-2 ${
                   link.highlight 
-                    ? 'bg-[#FF6600]/10 text-[#FF6600] font-black px-4 rounded-lg border border-[#FF6600]/30 animate-pulse w-fit' 
+                    ? 'bg-gray-900 text-[#FF6600] font-black px-5 py-3 rounded-xl border border-gray-800 shadow-md hover:bg-black hover:border-[#FF6600]/50 hover:shadow-[0_4px_15px_rgba(255,102,0,0.3)] w-fit group' 
                     : `font-medium text-base hover:text-[#FF6600] ${
                         location.pathname === link.path 
                           ? 'text-[#FF6600] font-bold' 
@@ -98,7 +98,7 @@ const Navbar = () => {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {link.highlight && <Sparkles className="w-4 h-4" />}
+                {link.highlight && <Sparkles className="w-4 h-4 animate-pulse" />}
                 {link.name}
               </Link>
             ))}
