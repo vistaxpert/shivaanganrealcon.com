@@ -270,6 +270,19 @@ export const PROJECTS_LIST: ProjectItem[] = [
     description: "Boutique residential building featuring 28 spacious apartments in a tranquil neighborhood.",
     amenities: ["Covered Parking", "Security", "Water Supply"]
   },
+  {
+    id: "shree-hights",
+    title: "Shree Heights",
+    category: "Residential",
+    status: "Ongoing",
+    location: "Satav Chowk, Baramati",
+    area: "20,000 Sq. Ft.",
+    year: "2026-2027",
+    units: "20 Flats",
+    image: "/images/shree.jpg",
+    description: "Boutique residential building featuring 20 spacious apartments in a tranquil neighborhood.",
+    amenities: ["Covered Parking", "Security", "Water Supply"]
+  },
   // {
   //   id: "dattakala-college",
   //   title: "Dattakala College of Engineering",

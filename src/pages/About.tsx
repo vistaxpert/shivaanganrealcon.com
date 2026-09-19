@@ -58,7 +58,7 @@ const About = () => {
     { year: "2022-23", title: "Vrundavan Park Phase 2 & Vrundavan Commercial", desc: "Launched Phase 2 development (70 flats) and commercial shopping arcade." },
     { year: "2023-24", title: "Durga City Mall, K-Square & Nirmiti Vihar Phase 2", desc: "Constructed Undri's premier 100K sq.ft Durga City Mall, K-Square MIDC commercial complex, and 112 flats." },
     { year: "2024-2026", title: "REGALIA Flagship Landmark", desc: "Unveiling ultra-luxury 2 & 3 BHK residential & commercial icon." },
-    { year: "2026-2027", title: "REGALIA Flagship Landmark", desc: "Unveiling ultra-luxury 2 & 3 BHK residential & commercial icon." }
+    { year: "2026-2027", title: "Shree Heights", desc: "Constructing Fine 2 & 3 BHK residential icon in Baramati." }
   ];
 
   return (
