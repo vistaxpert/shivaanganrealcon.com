@@ -46,7 +46,7 @@ const Projects = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center z-0" 
           style={{ 
-            backgroundImage: 'url(/images/building4.png)',
+            backgroundImage: 'url(/images/project.png)',
             backgroundPosition: 'center right'
           }}
         >
