@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { 
   Building2, CheckCircle2, ShieldCheck, Download, MapPin, 
   Sparkles, Phone, MessageCircle, ArrowRight, FileText, Compass, Key,
-  Maximize2, Zap, Award, Layers, ChevronRight, X
+  Maximize2, Zap, Award, Layers, ChevronRight, X,
+  BookOpen, ShoppingBag, Stethoscope, Briefcase, Map
 } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import { toast } from 'sonner';
@@ -92,6 +93,65 @@ const Regalia = () => {
       description: "Open-sky Luxury Lounge with Terrace Garden, Cabana Seating, and Private Jacuzzi.",
       features: ["Terrace Garden (13'8\" x 17'4\")", "Cabana Seating (13'8\" x 21'0\")", "Private Jacuzzi (8'0\" x 8'0\")", "Bar / Outdoor Lounge", "Roof Toilet"],
       image: "/images/roof.png"
+    }
+  ];
+
+  const locationCategories = [
+    {
+      title: "Educational Hubs",
+      icon: BookOpen,
+      items: [
+        { name: "Orchid International School", time: "4 Mins" },
+        { name: "Euro School", time: "4 Mins" },
+        { name: "The Bishop's Co-ed school", time: "6 Mins" },
+        { name: "Podar International School", time: "6 Mins" },
+        { name: "Dhruv Global School", time: "6 Mins" },
+        { name: "Boston World School", time: "10 Mins" },
+        { name: "Delhi Public School", time: "15 Mins" },
+        { name: "Vibgyor High School", time: "15 Mins" },
+        { name: "Sinhagad College", time: "15 Mins" },
+        { name: "VIT College", time: "25 Mins" }
+      ]
+    },
+    {
+      title: "Shopping",
+      icon: ShoppingBag,
+      items: [
+        { name: "Reliance Mart", time: "1 Mins" },
+        { name: "D-Mart", time: "10 Mins" },
+        { name: "Star Bazaar", time: "10 Mins" },
+        { name: "Tribeca High Street", time: "15 Mins" }
+      ]
+    },
+    {
+      title: "Health Care",
+      icon: Stethoscope,
+      items: [
+        { name: "Sai Vedant Multi Speciality Hospital", time: "5 Mins" },
+        { name: "Getwill Hospital", time: "5 Mins" },
+        { name: "Ruby Hall Clinic", time: "20 Mins" },
+        { name: "Command Hospital", time: "30 Mins" }
+      ]
+    },
+    {
+      title: "Corporates",
+      icon: Briefcase,
+      items: [
+        { name: "SP Infocity", time: "30 Mins" },
+        { name: "Hadapsar Industrial Estate", time: "30 Mins" },
+        { name: "Magarpatta", time: "35 Mins" },
+        { name: "Kharadi IT Park", time: "45 Mins" }
+      ]
+    },
+    {
+      title: "Connectivity",
+      icon: Map,
+      items: [
+        { name: "Pune Railway Station", time: "40 Mins" },
+        { name: "Pune International Airport", time: "50 Mins" },
+        { name: "Katraj Metro Station", time: "20 Mins" },
+        { name: "Saswad Road Metro Station", time: "20 Mins" }
+      ]
     }
   ];
 
@@ -288,7 +348,6 @@ const Regalia = () => {
               { title: "Multipurpose Hall", desc: "Ground floor community hall & used for celebrations." },
               { title: "Renewable Solar Energy", desc: "Solar panel connection for water heating & common area lighting." },
               { title: "Designer Entrance Lobby", desc: "Grand main gates with access control and security cabin." },
-              // { title: "Piped LPG Gas Bank", desc: "Centralized safe LPG gas bank system piped directly to kitchens." },
               { title: "Smart Parcel Lockers", desc: "Contactless safe delivery lockers at the main entrance." }
             ].map((amenity, idx) => (
               <motion.div 
@@ -360,7 +419,6 @@ const Regalia = () => {
                   "Concealed Fire-Resistant Copper Wiring",
                   "Modular Switches (Legrand / Anchor)",
                   "Jaguar Wall-Hung WCs & CP Fittings",
-                  // "Solar Hot Water Connection in Bathrooms"
                 ]
               },
               {
@@ -489,43 +547,51 @@ const Regalia = () => {
       {/* Section 5: Location Advantage */}
       <section id="location" className="py-20 md:py-28 bg-gray-50 scroll-mt-12 border-t border-gray-200">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="lg:col-span-7">
               <span className="text-xs font-bold text-[#FF6600] uppercase tracking-widest">Prime Connectivity</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2 mb-6">
                 Connected to Everything That Matters
               </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Situated in Undri — Pune’s most vibrant residential corridor with top-tier international schools, healthcare centers, and shopping hubs nearby.
+              <p className="text-gray-600 mb-8 leading-relaxed text-sm md:text-base">
+                Situated in Undri — Pune’s most vibrant residential corridor. Enjoy seamless access to Educational Hubs, Shopping and Health Care, as well as Corporates and Connectivity points.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  "Bishop's School, Undri – 3 Mins",
-                  "VIBGYOR High School – 5 Mins",
-                  "Dorabjee Royale Heritage Mall – 7 Mins",
-                  "Corinthians Resort & Club – 5 Mins",
-                  "NIBM Road Hub – 8 Mins",
-                  "Magarpatta IT City – 20 Mins"
-                ].map((loc, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-200 shadow-sm">
-                    <MapPin className="w-4 h-4 text-[#FF6600] shrink-0" />
-                    <span className="text-xs md:text-sm font-bold text-gray-800">{loc}</span>
+              <div className="space-y-6 max-h-[500px] overflow-y-auto pr-2 md:pr-4">
+                {locationCategories.map((category, idx) => (
+                  <div key={idx} className="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div className="flex items-center gap-3 mb-5 border-b border-gray-100 pb-3">
+                      <div className="bg-orange-50 text-[#FF6600] p-2.5 rounded-lg border border-orange-100/50">
+                        <category.icon className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900">{category.title}</h3>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                      {category.items.map((item, itemIdx) => (
+                        <div key={itemIdx} className="flex justify-between items-center gap-3 border-b border-gray-50 pb-2 last:border-0 last:pb-0 sm:[&:nth-last-child(-n+2)]:border-0 sm:[&:nth-last-child(-n+2)]:pb-0">
+                          <span className="text-sm font-semibold text-gray-700 truncate">{item.name}</span>
+                          <span className="text-xs font-bold text-[#FF6600] bg-[#FF6600]/10 px-2 py-1 rounded whitespace-nowrap">{item.time}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-300 h-96">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.538563124853!2d73.9068019!3d18.4592817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb330c6a8f15%3A0xb3ff765df0609355!2sUndri%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                title="Regalia Location Map"
-              ></iframe>
+            <div className="lg:col-span-5 sticky top-24">
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-300 h-[350px] lg:h-[500px]">
+                {/* Dynamically Queryable Generic Maps Link mapped to exact Undri property parameters */}
+                <iframe
+                  src="https://maps.google.com/maps?q=Shivaangan+Realcon,+Undri,+Pune&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  title="Regalia Location Map"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
